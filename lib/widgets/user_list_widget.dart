@@ -17,14 +17,14 @@ class UserListWidget extends StatelessWidget{
     return Column(
       children: [
         Consumer<UserDataProvider>(
-          builder: (ccontexttxt, value, child) {
+          builder: (context, value, child) {
             return Column(
                 children: getUsers(value.getUsers()), 
               );
           },
         ),
         Consumer<UserDataProvider>(
-          builder: (ccontexttxt, value, child) {
+          builder: (context, value, child) {
             var hasMore = value.hasMore();
             return hasMore ? LoadMore(onPressed: () {
               value.onNext();

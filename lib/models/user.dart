@@ -21,8 +21,7 @@ class User{
   }
 
   bool hasMatch(String text){
-   return email.contains(text) ||
-     firstName.contains(text) ||
+   return firstName.contains(text) ||
      lastName.contains(text);
   }
 }
